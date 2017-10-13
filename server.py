@@ -1,10 +1,10 @@
 import socket
 
+print(socket.gethostbyname(socket.getfqdn()))
 socket = socket.socket()
 ALL_ID = [["192.32.32.32", 9090, 1111], ["192.32.32.89", 9030, 2222]]
 
 socket.bind(('', 9090))
-print(socket.gethostbyname(socket.getfqdn()))
 print("listening to client")
 socket.listen()
 conn, addr = socket.accept()
