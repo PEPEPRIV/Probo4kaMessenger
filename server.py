@@ -6,7 +6,7 @@ ALL_ID = [["192.32.32.32", 9090, 1111], ["192.32.32.89", 9030, 2222]]
 
 socket.bind(('', 9090))
 print("listening to client")
-socket.listen()
+socket.listen(1)
 conn, addr = socket.accept()
 print("connected")
 
@@ -40,4 +40,4 @@ socket.sendto(message_to_Client_whoS2.encode("utf-8"), ip_Client_w0hS2)
 print("reply to C2")
 
 socket.bind(('', 9090))
-socket.listen()
+socket.listen(1)
